@@ -1,0 +1,22 @@
+html{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+#main_container_faq{
+    width: 310px;
+    background-color: white;
+    margin-top: 20%;
+    margin: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
