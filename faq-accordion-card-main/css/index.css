@@ -52,6 +52,7 @@ hr{
 .faq_question_container {
   display: flex;
   margin: 0 5px 0 5px;
+  color: hsl(240, 6%, 50%);
   justify-content: space-between;
   cursor: pointer;
 }
@@ -68,8 +69,13 @@ hr{
 }
 
 .faq_answer{
+  display: none;
   opacity: 0;
   position: absolute;
+  color: hsl(240, 6%, 50%);
+  font-size: 14px;
+  margin: 8px 5px 0px 5px;
+
 }
 
 
