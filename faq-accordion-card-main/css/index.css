@@ -1,48 +1,48 @@
-html{
-    height: 100%;
-    font-family: 'Kumbh Sans', sans-serif;
+html {
+  height: 100%;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
-body{
-    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
-#main_container_faq{
-    width: 330px;
-    background-color: white;
-    margin: auto;
-    border-radius: 20px;
+#main_container_faq {
+  width: 330px;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
 }
 
-#svg_logo{
+#svg_logo {
   position: absolute;
   margin-left: 1em;
   top: 3em;
 }
 
-#svg_logo_shadow{
+#svg_logo_shadow {
   margin-left: 2.5em;
 }
 
-#faq_text{
+#faq_text {
   padding-top: 2em;
   width: 320px;
   margin: auto;
   padding-bottom: 20px;
 }
 
-p{
+p {
   font-weight: normal;
 }
 
-hr{
+hr {
   border-width: 0.5px;
   border-style: solid;
   color: hsl(240, 5%, 91%);
   width: 300px;
 }
 
-.h2{
+.h2 {
   text-align: center;
   font-weight: 800;
   font-size: 2em;
@@ -57,27 +57,25 @@ hr{
   cursor: pointer;
 }
 
-.faq_question_container object{
+.faq_question_container object {
   width: 10px;
   margin: 0.2em 5px 0 0;
   text-align: end;
 }
 
-.faq_question{
+.faq_question {
   text-align: center;
   font-size: 14px;
 }
 
-.faq_answer{
+.faq_answer {
   display: none;
   opacity: 0;
   position: absolute;
   color: hsl(240, 6%, 50%);
   font-size: 14px;
   margin: 8px 5px 0px 5px;
-
 }
-
 
 .attribution {
   font-size: 11px;
@@ -85,4 +83,27 @@ hr{
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/*  COMPUTER DISPLAY  */
+
+@media only screen and (min-width: 700px) {
+  #main_container_faq {
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+  }
+
+  #svg_logo {
+    position: relative;
+  }
+
+  #svg_logo_shadow{
+    position: absolute;
+    top: 19em;
+  }
+
 }
