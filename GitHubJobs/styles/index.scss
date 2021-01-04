@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+}
+
+header {
+  width: 100%;
+  height: 136px;
+  background-image: url("../img/Triangle.svg");
+  h1 {
+    position: absolute;
+    width: 115px;
+    height: 32px;
+    left: 24px;
+    top: 32px;
+    background-image: url("../img/devjobs.svg");
+  }
+  #color_switch {
+    position: absolute;
+    width: 112px;
+    height: 24px;
+    left: 239px;
+    top: 36px;
+    background-image: url("../img/dark_mode_switch.svg");
+  }
+  #search_bar {
+    position: absolute;
+    width: 100%;
+    left: 24px;
+    top: 96px;
+    #search_input {
+      width: 87%;
+      height: 80px;
+    }
+  }
+}
