@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 body {
@@ -54,6 +55,52 @@ header {
       left: 74%;
       top: 16px;
       background-image: url(../img/search_icon.svg);
+    }
+  }
+}
+
+main {
+  margin: 97px 24px 0 24px;
+  #jobs_list {
+    .job {
+      background-color: #ffffff;
+      width: 327px;
+      height: 228px;
+      .company_logo {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 56px;
+        top: 208px;
+        background-color: yellow;
+      }
+      .job_description {
+        padding-top: 49px;
+        margin-left: 32px;
+        span {
+          font-weight: 400;
+          color: #6e8098;
+          font-size: 1rem;
+          display: flex;
+          .separator {
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+        }
+        h3 {
+          color: #19202d;
+          font-weight: 700;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          font-size: 1.25rem;
+        }
+        .job_tags {
+          color: #5964e0;
+          font-weight: 400;
+          font-size: 0.875rem;
+          margin-top: 26px;
+        }
+      }
     }
   }
 }
