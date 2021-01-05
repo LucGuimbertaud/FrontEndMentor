@@ -194,7 +194,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/Triangle.svg":[["Triangle.e28a6d9f.svg","img/Triangle.svg"],"img/Triangle.svg"],"./../img/devjobs.svg":[["devjobs.a6b8883b.svg","img/devjobs.svg"],"img/devjobs.svg"],"./../img/dark_mode_switch.svg":[["dark_mode_switch.4cab8eb6.svg","img/dark_mode_switch.svg"],"img/dark_mode_switch.svg"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app.js":[function(require,module,exports) {
+},{"./../img/Triangle.svg":[["Triangle.e28a6d9f.svg","img/Triangle.svg"],"img/Triangle.svg"],"./../img/devjobs.svg":[["devjobs.a6b8883b.svg","img/devjobs.svg"],"img/devjobs.svg"],"./../img/dark_mode_switch.svg":[["dark_mode_switch.4cab8eb6.svg","img/dark_mode_switch.svg"],"img/dark_mode_switch.svg"],"./../img/path.svg":[["path.ca7ce499.svg","img/path.svg"],"img/path.svg"],"./../img/search_icon.svg":[["search_icon.d3c9f39d.svg","img/search_icon.svg"],"img/search_icon.svg"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/reset.css");

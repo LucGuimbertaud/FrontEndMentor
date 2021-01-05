@@ -368,6 +368,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: #f2f2f2;
+}
+
 header {
   width: 100%;
   height: 136px;
@@ -398,6 +402,26 @@ header #search_bar {
 header #search_bar #search_input {
   width: 87%;
   height: 80px;
+  border-radius: 6px;
+  border-width: 0;
+}
+header #search_bar #filter_icon {
+  position: absolute;
+  left: 66.97%;
+  right: 26.92%;
+  top: 37.5%;
+  bottom: 37.5%;
+  width: 20px;
+  height: 20px;
+  background-image: url(/path.ca7ce499.svg);
+}
+header #search_bar #search_icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 74%;
+  top: 16px;
+  background-image: url(/search_icon.d3c9f39d.svg);
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */
