@@ -429,17 +429,21 @@ main {
   margin: 97px 24px 0 24px;
 }
 main #jobs_list .job {
+  position: relative;
   background-color: #ffffff;
   width: 327px;
   height: 228px;
+  margin-bottom: 49px;
 }
 main #jobs_list .job .company_logo {
   position: absolute;
   width: 50px;
   height: 50px;
   left: 56px;
-  top: 208px;
-  background-color: yellow;
+  top: -25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 main #jobs_list .job .job_description {
   padding-top: 49px;
@@ -450,6 +454,11 @@ main #jobs_list .job .job_description span {
   color: #6e8098;
   font-size: 1rem;
   display: flex;
+}
+main #jobs_list .job .job_description span p:first-child {
+  max-width: 10ch;
+  overflow: hidden;
+  white-space: nowrap;
 }
 main #jobs_list .job .job_description span .separator {
   margin-right: 10px;

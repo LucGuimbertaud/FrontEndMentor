@@ -63,16 +63,20 @@ main {
   margin: 97px 24px 0 24px;
   #jobs_list {
     .job {
+      position: relative;
       background-color: #ffffff;
       width: 327px;
       height: 228px;
+      margin-bottom: 49px;
       .company_logo {
         position: absolute;
         width: 50px;
         height: 50px;
         left: 56px;
-        top: 208px;
-        background-color: yellow;
+        top: -25px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
       .job_description {
         padding-top: 49px;
@@ -82,6 +86,11 @@ main {
           color: #6e8098;
           font-size: 1rem;
           display: flex;
+          p:first-child{
+            max-width: 10ch;
+            overflow: hidden;
+            white-space: nowrap;
+          }
           .separator {
             margin-right: 10px;
             margin-left: 10px;
