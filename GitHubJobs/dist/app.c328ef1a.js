@@ -10072,7 +10072,7 @@ function getData(stack) {
 
 function displayJobs(datas) {
   datas.forEach(function (data) {
-    console.log(data);
+    //console.log(data)
     var job = document.createElement("div");
     job.classList.add('job');
     document.querySelector('#jobs_list').append(job);
@@ -10121,7 +10121,23 @@ function removeJobs() {
     jobs_list.removeChild(jobs_list.firstChild);
   }
 }
-},{"axios":"node_modules/axios/index.js"}],"app.js":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js"}],"script/display_filter.js":[function(require,module,exports) {
+var filterButton = document.querySelector('#filter_icon');
+var filterPopUp = document.querySelector('#filter_pop_up');
+var set = false;
+filterButton.addEventListener('click', function () {
+  filterPopUp.classList.toggle('display_none');
+  setTimeout(function () {
+    set = true;
+  }, 500);
+});
+document.querySelector('body').addEventListener('click', function () {
+  if (set == true) {
+    filterPopUp.classList.toggle('display_none');
+    set = false;
+  }
+});
+},{}],"app.js":[function(require,module,exports) {
 "use strict";
 
 require("babel-polyfill");
@@ -10131,7 +10147,9 @@ require("./styles/reset.css");
 require("./styles/index.scss");
 
 require("./script/axios_request.js");
-},{"babel-polyfill":"node_modules/babel-polyfill/lib/index.js","./styles/reset.css":"styles/reset.css","./styles/index.scss":"styles/index.scss","./script/axios_request.js":"script/axios_request.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./script/display_filter.js");
+},{"babel-polyfill":"node_modules/babel-polyfill/lib/index.js","./styles/reset.css":"styles/reset.css","./styles/index.scss":"styles/index.scss","./script/axios_request.js":"script/axios_request.js","./script/display_filter.js":"script/display_filter.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

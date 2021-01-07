@@ -8,3 +8,4 @@ import './styles/index.scss';
 
 //js import
 import './script/axios_request.js';
+import './script/display_filter.js';

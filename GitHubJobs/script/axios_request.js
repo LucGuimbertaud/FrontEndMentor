@@ -37,7 +37,7 @@ function getData(stack) {
 // Use getData function to display jobs
 function displayJobs(datas){
     datas.forEach(data => {
-        console.log(data)
+        //console.log(data)
         let job = document.createElement("div");
         job.classList.add('job');
         document.querySelector('#jobs_list').append(job);

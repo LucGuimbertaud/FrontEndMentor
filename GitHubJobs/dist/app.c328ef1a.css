@@ -373,6 +373,14 @@ body {
   background-color: #f2f2f2;
 }
 
+.display_block {
+  display: block;
+}
+
+.display_none {
+  display: none;
+}
+
 header {
   width: 100%;
   height: 136px;
@@ -423,6 +431,16 @@ header #search_bar #search_icon {
   left: 74%;
   top: 16px;
   background-image: url(/search_icon.d3c9f39d.svg);
+}
+header #filter_pop_up {
+  position: absolute;
+  width: 327px;
+  height: 217px;
+  left: 24px;
+  top: 225px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  z-index: 100;
 }
 
 main {
@@ -485,7 +503,7 @@ footer {
 footer button {
   width: 141px;
   height: 48px;
-  background-color: #5964E0;
+  background-color: #5964e0;
   border-radius: 5px;
   border-width: 0;
   color: white;
