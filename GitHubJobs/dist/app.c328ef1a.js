@@ -10131,6 +10131,9 @@ filterButton.addEventListener('click', function () {
     set = true;
   }, 500);
 });
+filterPopUp.addEventListener('click', function () {
+  event.stopPropagation();
+});
 document.querySelector('body').addEventListener('click', function () {
   if (set == true) {
     filterPopUp.classList.toggle('display_none');

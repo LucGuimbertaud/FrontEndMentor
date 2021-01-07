@@ -1,5 +1,6 @@
 let filterButton = document.querySelector('#filter_icon');
 let filterPopUp = document.querySelector('#filter_pop_up');
+
 let set = false;
 
 filterButton.addEventListener('click', () => {
@@ -8,6 +9,10 @@ filterButton.addEventListener('click', () => {
     setTimeout(() => {
         set = true;
     }, 500);
+})
+
+filterPopUp.addEventListener('click', () => {
+    event.stopPropagation();
 })
 
 document.querySelector('body').addEventListener('click', () => {
