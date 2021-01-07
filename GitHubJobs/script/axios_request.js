@@ -1,20 +1,27 @@
 const axios = require("axios");
+let stack = "python";
 
 main();
 
 async function main(){
-    let datas = await getData();
+    let datas = await getData(stack);
     displayJobs(datas);
+
+    let search_input = document.querySelector('#search_icon');
+    search_input.addEventListener('click', async () => {
+      let inputDatas = await getData(getInput());
+      removeJobs();
+      displayJobs(inputDatas);
+    });
 }
 
 
 // Request with axios to get data threw Git API.
-
-function getData() {
+function getData(stack) {
   return new Promise((resolve, reject) => {
     axios
       .get(
-        "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=python&location=new+york"
+        `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${stack}&location=`
       )
       .then((response) => {
           let result = response.data;
@@ -27,6 +34,7 @@ function getData() {
   });
 }
 
+// Use getData function to display jobs
 function displayJobs(datas){
     datas.forEach(data => {
         console.log(data)
@@ -72,4 +80,18 @@ function displayJobs(datas){
         tags.textContent = `${data.title}`;
         document.querySelectorAll('.job_description')[(document.querySelectorAll('.job_description').length)-1].append(tags);
     });
+}
+
+// Get the data from the input
+function getInput(){
+  let search_bar_content = document.querySelector('#search_input').value;
+  return search_bar_content;
+}
+
+function removeJobs(){
+  let jobs_list = document.querySelector('#jobs_list');
+
+  while(jobs_list.firstChild){
+    jobs_list.removeChild(jobs_list.firstChild);
+  }
 }
