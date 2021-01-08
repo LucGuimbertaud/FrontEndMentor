@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
@@ -22,14 +22,27 @@
 
       <div id="filter_pop_up" class="display_none">
         <div id="location_search_bar">
-          <img src="./img/location.svg" alt="Location Pin">
+          <img src="./img/location.svg" alt="Location Pin" />
+          <input
+            type="text"
+            placeholder="Filter by location .."
+            id="location_input"
+          />
+        </div>
+        <div id="border"></div>
+        <div id="time_check">
+          <input type="checkbox" id="full_time_checkbox" />
+          <p>Full Time Only</p>
+        </div>
+        <div id="button_container">
+          <button>Search</button>
         </div>
       </div>
+      <div id="pop_up_background" class="display_none"></div>
     </header>
 
     <main>
-      <section id="jobs_list">
-      </section>
+      <section id="jobs_list"></section>
     </main>
 
     <footer>

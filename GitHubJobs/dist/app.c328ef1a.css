@@ -373,6 +373,18 @@ body {
   background-color: #f2f2f2;
 }
 
+#pop_up_background {
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 90;
+}
+
 .display_block {
   display: block;
 }
@@ -441,6 +453,48 @@ header #filter_pop_up {
   background-color: #ffffff;
   border-radius: 6px;
   z-index: 100;
+}
+header #filter_pop_up #location_search_bar {
+  display: flex;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+header #filter_pop_up #location_search_bar #location_input {
+  margin-left: 16px;
+  border-width: 0;
+}
+header #filter_pop_up #border {
+  width: 327px;
+  height: 1px;
+  background: #6e8098;
+  mix-blend-mode: normal;
+  opacity: 0.2;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+header #filter_pop_up #time_check {
+  margin-left: 24px;
+  display: flex;
+}
+header #filter_pop_up #time_check #full_time_checkbox {
+  margin-right: 16px;
+}
+header #filter_pop_up #time_check p {
+  font-weight: 700;
+}
+header #filter_pop_up #button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+header #filter_pop_up #button_container button {
+  width: 279px;
+  height: 48px;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: #5964e0;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 main {

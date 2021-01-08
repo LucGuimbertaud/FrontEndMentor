@@ -10124,9 +10124,26 @@ function removeJobs() {
 },{"axios":"node_modules/axios/index.js"}],"script/display_filter.js":[function(require,module,exports) {
 var filterButton = document.querySelector('#filter_icon');
 var filterPopUp = document.querySelector('#filter_pop_up');
+var background = document.querySelector('#pop_up_background');
 var set = false;
+
+function disableScroll() {
+  // Get the current page scroll position 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, // if any scroll is attempted, set this to the previous value 
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
+}
+
 filterButton.addEventListener('click', function () {
   filterPopUp.classList.toggle('display_none');
+  background.classList.toggle('display_none');
+  disableScroll();
   setTimeout(function () {
     set = true;
   }, 500);
@@ -10137,6 +10154,8 @@ filterPopUp.addEventListener('click', function () {
 document.querySelector('body').addEventListener('click', function () {
   if (set == true) {
     filterPopUp.classList.toggle('display_none');
+    background.classList.toggle('display_none');
+    enableScroll();
     set = false;
   }
 });
@@ -10180,7 +10199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65066" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65044" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
