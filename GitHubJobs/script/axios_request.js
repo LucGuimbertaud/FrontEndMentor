@@ -1,14 +1,28 @@
 const axios = require("axios");
-let stack = "python";
+let filter_datas = [
+  "python",
+  "New+York",
+  "false"
+];
+
+let loading = document.querySelector('#loading')
 
 main();
 
 async function main(){
-    let datas = await getData(stack);
+    let datas = await getData(filter_datas);
     displayJobs(datas);
 
     let search_input = document.querySelector('#search_icon');
     search_input.addEventListener('click', async () => {
+      let inputDatas = await getData(getInput());
+      removeJobs();
+      console.log('ok');
+      displayJobs(inputDatas);
+    });
+
+    let search_input_filter = document.querySelector('#search_filter');
+    search_input_filter.addEventListener('click', async () => {
       let inputDatas = await getData(getInput());
       removeJobs();
       displayJobs(inputDatas);
@@ -17,11 +31,11 @@ async function main(){
 
 
 // Request with axios to get data threw Git API.
-function getData(stack) {
+function getData(filter_datas) {
   return new Promise((resolve, reject) => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${stack}&location=`
+        `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${filter_datas[0]}&location=${filter_datas[1]}&full_time=${filter_datas[2]}`
       )
       .then((response) => {
           let result = response.data;
@@ -84,7 +98,19 @@ function displayJobs(datas){
 
 // Get the data from the input
 function getInput(){
-  let search_bar_content = document.querySelector('#search_input').value;
+  let search_bar_content = [];
+  search_bar_content[0] = document.querySelector('#search_input').value;
+  search_bar_content[1] = document.querySelector('#location_input').value;
+
+  
+  try{
+    document.querySelector('#full_time_checkbox:checked').value;
+    search_bar_content[2] = "true";
+  }catch{
+    search_bar_content[2] = "false";
+  }
+  
+  console.log(search_bar_content);
   return search_bar_content;
 }
 

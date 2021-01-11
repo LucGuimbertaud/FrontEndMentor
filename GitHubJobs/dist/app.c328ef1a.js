@@ -10004,7 +10004,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var axios = require("axios");
 
-var stack = "python";
+var filter_datas = ["python", "New+York", "false"];
+var loading = document.querySelector('#loading');
 main();
 
 function main() {
@@ -10013,17 +10014,17 @@ function main() {
 
 
 function _main() {
-  _main = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-    var datas, search_input;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+  _main = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+    var datas, search_input, search_input_filter;
+    return regeneratorRuntime.wrap(function _callee3$(_context3) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context3.prev = _context3.next) {
           case 0:
-            _context2.next = 2;
-            return getData(stack);
+            _context3.next = 2;
+            return getData(filter_datas);
 
           case 2:
-            datas = _context2.sent;
+            datas = _context3.sent;
             displayJobs(datas);
             search_input = document.querySelector('#search_icon');
             search_input.addEventListener('click', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
@@ -10038,29 +10039,52 @@ function _main() {
                     case 2:
                       inputDatas = _context.sent;
                       removeJobs();
+                      console.log('ok');
                       displayJobs(inputDatas);
 
-                    case 5:
+                    case 6:
                     case "end":
                       return _context.stop();
                   }
                 }
               }, _callee);
             })));
+            search_input_filter = document.querySelector('#search_filter');
+            search_input_filter.addEventListener('click', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              var inputDatas;
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      _context2.next = 2;
+                      return getData(getInput());
 
-          case 6:
+                    case 2:
+                      inputDatas = _context2.sent;
+                      removeJobs();
+                      displayJobs(inputDatas);
+
+                    case 5:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2);
+            })));
+
+          case 8:
           case "end":
-            return _context2.stop();
+            return _context3.stop();
         }
       }
-    }, _callee2);
+    }, _callee3);
   }));
   return _main.apply(this, arguments);
 }
 
-function getData(stack) {
+function getData(filter_datas) {
   return new Promise(function (resolve, reject) {
-    axios.get("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=".concat(stack, "&location=")).then(function (response) {
+    axios.get("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=".concat(filter_datas[0], "&location=").concat(filter_datas[1], "&full_time=").concat(filter_datas[2])).then(function (response) {
       var result = response.data;
       resolve(result);
     }, function (error) {
@@ -10110,7 +10134,18 @@ function displayJobs(datas) {
 
 
 function getInput() {
-  var search_bar_content = document.querySelector('#search_input').value;
+  var search_bar_content = [];
+  search_bar_content[0] = document.querySelector('#search_input').value;
+  search_bar_content[1] = document.querySelector('#location_input').value;
+
+  try {
+    document.querySelector('#full_time_checkbox:checked').value;
+    search_bar_content[2] = "true";
+  } catch (_unused) {
+    search_bar_content[2] = "false";
+  }
+
+  console.log(search_bar_content);
   return search_bar_content;
 }
 
@@ -10199,7 +10234,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65044" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59928" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
