@@ -8197,7 +8197,12 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/Triangle.svg":[["Triangle.e28a6d9f.svg","img/Triangle.svg"],"img/Triangle.svg"],"./../img/devjobs.svg":[["devjobs.a6b8883b.svg","img/devjobs.svg"],"img/devjobs.svg"],"./../img/dark_mode_switch.svg":[["dark_mode_switch.4cab8eb6.svg","img/dark_mode_switch.svg"],"img/dark_mode_switch.svg"],"./../img/path.svg":[["path.ca7ce499.svg","img/path.svg"],"img/path.svg"],"./../img/search_icon.svg":[["search_icon.d3c9f39d.svg","img/search_icon.svg"],"img/search_icon.svg"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{"./../img/Triangle.svg":[["Triangle.e28a6d9f.svg","img/Triangle.svg"],"img/Triangle.svg"],"./../img/devjobs.svg":[["devjobs.a6b8883b.svg","img/devjobs.svg"],"img/devjobs.svg"],"./../img/dark_mode_switch.svg":[["dark_mode_switch.4cab8eb6.svg","img/dark_mode_switch.svg"],"img/dark_mode_switch.svg"],"./../img/path.svg":[["path.ca7ce499.svg","img/path.svg"],"img/path.svg"],"./../img/search_icon.svg":[["search_icon.d3c9f39d.svg","img/search_icon.svg"],"img/search_icon.svg"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"styles/medium.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -10004,7 +10009,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var axios = require("axios");
 
-var filter_datas = ["python", "New+York", "false"];
+var filter_datas = ["python", "", ""];
 var loading = document.querySelector('#loading');
 main();
 
@@ -10203,10 +10208,12 @@ require("./styles/reset.css");
 
 require("./styles/index.scss");
 
+require("./styles/medium.scss");
+
 require("./script/axios_request.js");
 
 require("./script/display_filter.js");
-},{"babel-polyfill":"node_modules/babel-polyfill/lib/index.js","./styles/reset.css":"styles/reset.css","./styles/index.scss":"styles/index.scss","./script/axios_request.js":"script/axios_request.js","./script/display_filter.js":"script/display_filter.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"babel-polyfill":"node_modules/babel-polyfill/lib/index.js","./styles/reset.css":"styles/reset.css","./styles/index.scss":"styles/index.scss","./styles/medium.scss":"styles/medium.scss","./script/axios_request.js":"script/axios_request.js","./script/display_filter.js":"script/display_filter.js"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10234,7 +10241,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59928" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51514" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

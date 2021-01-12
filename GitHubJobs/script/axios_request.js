@@ -1,8 +1,8 @@
 const axios = require("axios");
 let filter_datas = [
   "python",
-  "New+York",
-  "false"
+  "",
+  ""
 ];
 
 let loading = document.querySelector('#loading')

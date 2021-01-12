@@ -398,26 +398,27 @@ header {
   height: 136px;
   background-image: url("/Triangle.e28a6d9f.svg");
 }
+header #title_switch_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 24px 0 24px;
+}
 header h1 {
-  position: absolute;
   width: 115px;
   height: 32px;
-  left: 24px;
-  top: 32px;
   background-image: url("/devjobs.a6b8883b.svg");
 }
 header #color_switch {
-  position: absolute;
   width: 112px;
   height: 24px;
-  left: 239px;
-  top: 36px;
   background-image: url("/dark_mode_switch.4cab8eb6.svg");
 }
 header #search_bar {
   position: absolute;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  left: 24px;
   top: 96px;
 }
 header #search_bar #search_input {
@@ -500,12 +501,16 @@ header #filter_pop_up #button_container button {
 main {
   margin: 97px 24px 0 24px;
 }
+main #jobs_list {
+  display: flex;
+  flex-wrap: wrap;
+}
 main #jobs_list .job {
   position: relative;
   background-color: #ffffff;
   width: 327px;
   height: 228px;
-  margin-bottom: 49px;
+  margin: 0 auto 49px auto;
 }
 main #jobs_list .job .company_logo {
   position: absolute;
@@ -562,6 +567,14 @@ footer button {
   border-width: 0;
   color: white;
   font-weight: 700;
+}
+@media all and (min-width: 720px) {
+  header #search_bar #search_icon {
+    display: none;
+  }
+  header #search_bar #filter_icon {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

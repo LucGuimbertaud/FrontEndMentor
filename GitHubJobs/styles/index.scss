@@ -30,26 +30,28 @@ header {
   width: 100%;
   height: 136px;
   background-image: url("../img/Triangle.svg");
+  #title_switch_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 24px 0 24px;
+    
+  }
   h1 {
-    position: absolute;
     width: 115px;
     height: 32px;
-    left: 24px;
-    top: 32px;
     background-image: url("../img/devjobs.svg");
   }
   #color_switch {
-    position: absolute;
     width: 112px;
     height: 24px;
-    left: 239px;
-    top: 36px;
     background-image: url("../img/dark_mode_switch.svg");
   }
   #search_bar {
     position: absolute;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    left: 24px;
     top: 96px;
     #search_input {
       width: 87%;
@@ -134,12 +136,14 @@ header {
 main {
   margin: 97px 24px 0 24px;
   #jobs_list {
+    display: flex;
+    flex-wrap: wrap;
     .job {
       position: relative;
       background-color: #ffffff;
       width: 327px;
       height: 228px;
-      margin-bottom: 49px;
+      margin: 0 auto 49px auto;
       .company_logo {
         position: absolute;
         width: 50px;
