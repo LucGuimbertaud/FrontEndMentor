@@ -53,6 +53,11 @@ header {
     justify-content: center;
     width: 100%;
     top: 96px;
+    #location_search{
+      //display: none;
+      position: absolute;
+      height: 80px;
+    }
     #search_input {
       width: 87%;
       height: 80px;

@@ -421,6 +421,10 @@ header #search_bar {
   width: 100%;
   top: 96px;
 }
+header #search_bar #location_search {
+  position: absolute;
+  height: 80px;
+}
 header #search_bar #search_input {
   width: 87%;
   height: 80px;
