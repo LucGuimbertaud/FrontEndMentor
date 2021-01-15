@@ -2,12 +2,26 @@
   header {
     #search_bar {
       #search_icon {
-        display: none;
+        left: 87%;
       }
       #filter_icon {
         display: none;
       }
       #search_input {
+      }
+      #location_search {
+        padding-left: 10px;
+        display: block;
+      }
+      #time_check_reponsive {
+        position: absolute;
+        display: flex;
+        height: 48px;
+        left: 70%;
+        top: 32px;
+        input{
+          margin-right: 10px;
+        }
       }
     }
   }

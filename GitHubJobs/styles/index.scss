@@ -54,9 +54,17 @@ header {
     width: 100%;
     top: 96px;
     #location_search{
-      //display: none;
+      display: none;
       position: absolute;
       height: 80px;
+      border: 0px;
+      border-left: solid;
+      border-right: solid;
+      padding-right: 20px;
+      border-width: 1px;
+    }
+    #time_check_reponsive{
+      display: none;
     }
     #search_input {
       width: 87%;
